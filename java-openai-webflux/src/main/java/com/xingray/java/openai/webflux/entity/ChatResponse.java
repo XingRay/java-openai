@@ -17,7 +17,7 @@ public class ChatResponse {
     @JsonProperty("usage")
     private Usage usage;
     @JsonProperty("choices")
-    private List<Choices> choices;
+    private List<Choice> choices;
 
     public String getId() {
         return id;
@@ -59,11 +59,11 @@ public class ChatResponse {
         this.usage = usage;
     }
 
-    public List<Choices> getChoices() {
+    public List<Choice> getChoices() {
         return choices;
     }
 
-    public void setChoices(List<Choices> choices) {
+    public void setChoices(List<Choice> choices) {
         this.choices = choices;
     }
 

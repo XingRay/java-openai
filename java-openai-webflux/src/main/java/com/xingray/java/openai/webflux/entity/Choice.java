@@ -2,19 +2,19 @@ package com.xingray.java.openai.webflux.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Choices {
+public class Choice {
     @JsonProperty("text")
     private String text;
-
     @JsonProperty("message")
     private Message message;
-
     @JsonProperty("index")
     private Integer index;
     @JsonProperty("logprobs")
     private Object logprobs;
     @JsonProperty("finish_reason")
     private String finishReason;
+    @JsonProperty("delta")
+    private Delta delta;
 
     public String getText() {
         return text;
@@ -56,6 +56,14 @@ public class Choices {
         this.finishReason = finishReason;
     }
 
+    public Delta getDelta() {
+        return delta;
+    }
+
+    public void setDelta(Delta delta) {
+        this.delta = delta;
+    }
+
     @Override
     public String toString() {
         return "Choices{" +
@@ -64,6 +72,7 @@ public class Choices {
                 ", index=" + index +
                 ", logprobs=" + logprobs +
                 ", finishReason='" + finishReason + '\'' +
+                ", delta=" + delta +
                 '}';
     }
 }

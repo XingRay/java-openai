@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+java-openai-webflux/src/test/java/com/xingray/java/openai/webflux/test/Secret.java
+/java-openai-webflux/log/

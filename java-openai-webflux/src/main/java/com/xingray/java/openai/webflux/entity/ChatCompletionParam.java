@@ -1,6 +1,7 @@
 package com.xingray.java.openai.webflux.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.xingray.java.openai.webflux.entity.Message;
 
 import java.util.List;
 

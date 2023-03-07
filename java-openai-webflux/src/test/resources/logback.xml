@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--<property name="TERMINAL_LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %yellow (at %class.%method) \\(%file:%line\\)%n%msg%n"/>-->
+
+    <property name="TERMINAL_LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level at %c.%M (%F:%L\) %msg%n"/>
+
+    <property name="LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level at %c.%M (%F:%L\) %msg%n"/>
+
+    <property name="LOG_PATH" value="./log"/>
+    <property name="LOG_NAME" value="openai"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <conditionFactory class="ch.qos.logback.classic.conditionFactory.ThresholdFilter">
+            <level>info</level>
+        </conditionFactory>
+
+        <encoder>
+            <pattern>${TERMINAL_LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--<appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${LOG_NAME}.log</file>
+
+        <conditionFactory class="ch.qos.logback.classic.conditionFactory.ThresholdFilter">
+            <level>debug</level>
+        </conditionFactory>
+
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/${LOG_NAME}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+    </appender>-->
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+<!--        <appender-ref ref="RollingFile"/>-->
+    </root>
+</configuration>

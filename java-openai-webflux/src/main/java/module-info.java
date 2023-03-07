@@ -16,4 +16,5 @@ module com.xingray.java.openai.webflux {
 
     exports com.xingray.java.openai.webflux.entity;
     exports com.xingray.java.openai.webflux.api;
+    exports com.xingray.java.openai.webflux.constants;
 }

@@ -7,7 +7,7 @@ module com.xingray.java.openai.webflux.test {
     requires reactor.netty.core;
     requires reactor.netty.http;
     requires reactor.core;
-    requires org.slf4j;
+    requires org.reactivestreams;
 
     opens com.xingray.java.openai.webflux.test;
 }

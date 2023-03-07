@@ -2,19 +2,12 @@ package com.xingray.java.openai.webflux.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Message {
+public class Delta {
     @JsonProperty("role")
     private String role;
+
     @JsonProperty("content")
     private String content;
-
-    public Message() {
-    }
-
-    public Message(String role, String content) {
-        this.role = role;
-        this.content = content;
-    }
 
     public String getRole() {
         return role;
@@ -34,7 +27,7 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
+        return "Delta{" +
                 "role='" + role + '\'' +
                 ", content='" + content + '\'' +
                 '}';

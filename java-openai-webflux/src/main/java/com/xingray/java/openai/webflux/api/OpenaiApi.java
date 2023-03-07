@@ -1,6 +1,8 @@
 package com.xingray.java.openai.webflux.api;
 
 import com.xingray.java.openai.webflux.entity.*;
+import com.xingray.java.openai.webflux.entity.ChatCompletionParam;
+import com.xingray.java.openai.webflux.entity.ChatRequest;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.service.annotation.GetExchange;
@@ -32,4 +34,11 @@ public interface OpenaiApi {
      */
     @PostExchange(url = "/v1/chat/completions")
     Flux<ChatResponse> chatCompletions(@RequestBody ChatCompletionParam param);
+
+    /**
+     * POST https://api.openai.com/v1/chat/completions
+     * Creates a completion for the chat message
+     */
+    @PostExchange(url = "/v1/chat/completions")
+    Flux<String> chatCompletions(@RequestBody ChatRequest request);
 }

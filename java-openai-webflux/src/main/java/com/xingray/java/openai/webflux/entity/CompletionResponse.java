@@ -15,7 +15,7 @@ public class CompletionResponse {
     @JsonProperty("model")
     private String model;
     @JsonProperty("choices")
-    private List<Choices> choices;
+    private List<Choice> choices;
     @JsonProperty("usage")
     private Usage usage;
 
@@ -51,11 +51,11 @@ public class CompletionResponse {
         this.model = model;
     }
 
-    public List<Choices> getChoices() {
+    public List<Choice> getChoices() {
         return choices;
     }
 
-    public void setChoices(List<Choices> choices) {
+    public void setChoices(List<Choice> choices) {
         this.choices = choices;
     }
 
